@@ -1,0 +1,40 @@
+﻿@model Participant
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout";
+}
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" placeholder="Name"/>
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="LastName" class="form-label"></label>
+        <input asp-for="LastName" class="form-control" placeholder="Last Name" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" placeholder="E-Mail" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="DateYouLive"></label>
+        <input asp-for="DateYouLive" placeholder="Date You Live" value="1997-09-08T00:00"/>
+        <span asp-validation-for="DateYouLive"></span>
+    </div>
+    <div class="mb-3 form-check">
+        <label asp-for="Participation" class="form-check-label">Did you going to participate the event?</label>
+        <input asp-for="Participation" class="form-check-input" checked/>
+        <span asp-validation-for="Participation"></span>
+    </div>
+    <div class="mb-3 form-check">
+        <label asp-for="CovidShot" class="form-check-label">Did you get your covid shots?</label>
+        <input asp-for="CovidShot" class="form-check-input" checked/>
+        <span asp-validation-for="CovidShot"></span>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
